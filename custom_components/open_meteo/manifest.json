@@ -1,0 +1,13 @@
+{
+  "domain": "open_meteo",
+  "name": "Open-Meteo",
+  "codeowners": ["@natekspencer"],
+  "config_flow": true,
+  "dependencies": ["device_tracker"],
+  "documentation": "https://www.home-assistant.io/integrations/open_meteo",
+  "integration_type": "service",
+  "loggers": ["custom_components.open_meteo", "open_meteo"],
+  "iot_class": "cloud_polling",
+  "requirements": ["open-meteo>=0.2.1"],
+  "version": "0.1.0"
+}

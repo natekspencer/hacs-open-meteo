@@ -1,0 +1,6 @@
+{
+  "name": "Open-Meteo",
+  "domains": ["weather"],
+  "homeassistant": "2023.4.0",
+  "iot_class": "Cloud Polling"
+}

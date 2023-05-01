@@ -1,0 +1,24 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "description": "Select location to use for weather forecasting",
+        "data": {
+          "zone": "Location"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "[%key:common::config_flow::abort::already_configured_service%]"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "scan_interval": "Set the time interval (in minutes) between forecast updates"
+        }
+      }
+    }
+  }
+}
