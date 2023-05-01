@@ -9,7 +9,8 @@
       }
     },
     "abort": {
-      "already_configured": "[%key:common::config_flow::abort::already_configured_service%]"
+      "already_configured": "[%key:common::config_flow::abort::already_configured_service%]",
+      "invalid_location": "The location selected does not have a valid latitude or longitude"
     }
   },
   "options": {

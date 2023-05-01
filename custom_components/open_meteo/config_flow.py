@@ -49,6 +49,9 @@ class OpenMeteoFlowHandler(ConfigFlow, domain=DOMAIN):
             self._abort_if_unique_id_configured()
 
             state = self.hass.states.get(user_input[CONF_ZONE])
+            attributes = state.attributes
+            if None in (attributes.get("latitude"), attributes.get("longitude")):
+                return self.async_abort(reason="invalid_location")
             return self.async_create_entry(
                 title=state.name if state else "Open-Meteo",
                 data={CONF_ZONE: user_input[CONF_ZONE]},

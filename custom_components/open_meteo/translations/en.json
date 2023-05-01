@@ -10,6 +10,7 @@
   },
   "config": {
     "abort": {
+      "invalid_location": "The location selected does not have a valid latitude or longitude",
       "already_configured": "Service is already configured"
     },
     "step": {

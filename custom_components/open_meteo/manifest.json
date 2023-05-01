@@ -4,7 +4,7 @@
   "codeowners": ["@natekspencer"],
   "config_flow": true,
   "dependencies": ["device_tracker"],
-  "documentation": "https://www.home-assistant.io/integrations/open_meteo",
+  "documentation": "https://www.github.com/natekspencer/hacs-open-meteo",
   "integration_type": "service",
   "loggers": ["custom_components.open_meteo", "open_meteo"],
   "iot_class": "cloud_polling",
