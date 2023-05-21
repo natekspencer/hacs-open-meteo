@@ -1,3 +1,11 @@
+![Release](https://img.shields.io/github/v/release/natekspencer/hacs-open-meteo?style=for-the-badge)
+[![Buy Me A Coffee/Beer](https://img.shields.io/badge/Buy_Me_A_☕/🍺-F16061?style=for-the-badge&logo=ko-fi&logoColor=white&labelColor=grey)](https://ko-fi.com/natekspencer)
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://brands.home-assistant.io/open_meteo/dark_logo.png">
+  <img alt="Open-Meteo logo" src="https://brands.home-assistant.io/open_meteo/logo.png">
+</picture>
+
 # Open-Meteo Home Assistant integration for zones and device trackers
 
 [![GitHub Release][releases-shield]][releases]
