@@ -1,16 +1,15 @@
 """Config flow to configure the Open-Meteo integration."""
+
 from __future__ import annotations
 
 from typing import Any
 
 import voluptuous as vol
-
 from homeassistant.components.device_tracker import DOMAIN as DEVICE_TRACKER_DOMAIN
 from homeassistant.components.zone import DOMAIN as ZONE_DOMAIN
-from homeassistant.config_entries import ConfigEntry, ConfigFlow
+from homeassistant.config_entries import ConfigEntry, ConfigFlow, ConfigFlowResult
 from homeassistant.const import CONF_SCAN_INTERVAL, CONF_ZONE
 from homeassistant.core import callback
-from homeassistant.data_entry_flow import FlowResult
 from homeassistant.helpers.schema_config_entry_flow import (
     SchemaFlowFormStep,
     SchemaOptionsFlowHandler,
@@ -42,7 +41,7 @@ class OpenMeteoFlowHandler(ConfigFlow, domain=DOMAIN):
 
     async def async_step_user(
         self, user_input: dict[str, Any] | None = None
-    ) -> FlowResult:
+    ) -> ConfigFlowResult:
         """Handle a flow initialized by the user."""
         if user_input is not None:
             await self.async_set_unique_id(user_input[CONF_ZONE])
@@ -64,8 +63,8 @@ class OpenMeteoFlowHandler(ConfigFlow, domain=DOMAIN):
                     vol.Required(CONF_ZONE): EntitySelector(
                         EntitySelectorConfig(
                             domain=[ZONE_DOMAIN, DEVICE_TRACKER_DOMAIN]
-                        ),
-                    ),
+                        )
+                    )
                 }
             ),
         )

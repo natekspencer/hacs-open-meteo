@@ -1,4 +1,5 @@
-"""Support for Open-Meteo weather."""
+"""Support for Open-Meteo sensor."""
+
 from __future__ import annotations
 
 from homeassistant.components.sensor import (
@@ -7,22 +8,21 @@ from homeassistant.components.sensor import (
     SensorEntityDescription,
     SensorStateClass,
 )
-from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import UnitOfTemperature
 from homeassistant.core import HomeAssistant
-from homeassistant.helpers.entity_platform import AddEntitiesCallback
+from homeassistant.helpers.entity_platform import AddConfigEntryEntitiesCallback
 
-from .const import DOMAIN
+from .coordinator import OpenMeteoConfigEntry
 from .entity import OpenMeteoEntity
 
 
 async def async_setup_entry(
     hass: HomeAssistant,
-    entry: ConfigEntry,
-    async_add_entities: AddEntitiesCallback,
+    entry: OpenMeteoConfigEntry,
+    async_add_entities: AddConfigEntryEntitiesCallback,
 ) -> None:
     """Set up Open-Meteo weather entity based on a config entry."""
-    coordinator = hass.data[DOMAIN][entry.entry_id]
+    coordinator = entry.runtime_data
     async_add_entities([OpenMeteoSensorEntity(entry=entry, coordinator=coordinator)])
 
 
