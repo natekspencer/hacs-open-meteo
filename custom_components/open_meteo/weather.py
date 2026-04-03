@@ -48,16 +48,6 @@ class OpenMeteoWeatherEntity(
         WeatherEntityFeature.FORECAST_DAILY | WeatherEntityFeature.FORECAST_HOURLY
     )
 
-    def __init__(
-        self,
-        *,
-        entry: OpenMeteoConfigEntry,
-        coordinator: OpenMeteoDataUpdateCoordinator,
-    ) -> None:
-        """Initialize Open-Meteo weather entity."""
-        super().__init__(entry=entry, coordinator=coordinator)
-        SingleCoordinatorWeatherEntity.__init__(self, coordinator=coordinator)
-
     @property
     def condition(self) -> str | None:
         """Return the current condition."""

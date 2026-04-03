@@ -49,16 +49,23 @@ class OpenMeteoDataUpdateCoordinator(DataUpdateCoordinator[Forecast]):
         self.open_meteo = OpenMeteo(session=session)
 
     async def _async_update_data(self) -> Forecast:
-        """Fetch data from Sensibo."""
+        """Fetch data from Open-Meteo."""
         if (zone := self.hass.states.get(self.config_entry.data[CONF_ZONE])) is None:
             raise UpdateFailed(
                 f"Location '{self.config_entry.data[CONF_ZONE]}' not found"
             )
 
+        latitude = zone.attributes.get(ATTR_LATITUDE)
+        longitude = zone.attributes.get(ATTR_LONGITUDE)
+        if latitude is None or longitude is None:
+            raise UpdateFailed(
+                f"Location '{self.config_entry.data[CONF_ZONE]}' missing coordinates"
+            )
+
         try:
             return await self.open_meteo.forecast(
-                latitude=zone.attributes[ATTR_LATITUDE],
-                longitude=zone.attributes[ATTR_LONGITUDE],
+                latitude=latitude,
+                longitude=longitude,
                 current_weather=True,
                 daily=[
                     DailyParameters.PRECIPITATION_SUM,
