@@ -1,9 +1,7 @@
 {
   "name": "Open-Meteo",
-  "domains": [
-    "weather",
-    "sensor"
-  ],
   "homeassistant": "2024.12.0",
-  "iot_class": "Cloud Polling"
+  "render_readme": true,
+  "zip_release": true,
+  "filename": "open_meteo.zip"
 }
