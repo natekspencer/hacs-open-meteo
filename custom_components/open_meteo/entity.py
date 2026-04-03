@@ -1,28 +1,27 @@
 """Support for Open-Meteo entity."""
+
 from __future__ import annotations
 
-from open_meteo import Forecast
-
-from homeassistant.config_entries import ConfigEntry
 from homeassistant.helpers.device_registry import DeviceEntryType
 from homeassistant.helpers.entity import DeviceInfo
-from homeassistant.helpers.update_coordinator import (
-    CoordinatorEntity,
-    DataUpdateCoordinator,
-)
+from homeassistant.helpers.update_coordinator import CoordinatorEntity
 
 from .const import DOMAIN
+from .coordinator import OpenMeteoConfigEntry, OpenMeteoDataUpdateCoordinator
 
 
-class OpenMeteoEntity(CoordinatorEntity[DataUpdateCoordinator[Forecast]]):
+class OpenMeteoEntity(CoordinatorEntity[OpenMeteoDataUpdateCoordinator]):
     """Defines an Open-Meteo entity base class."""
 
     _attr_has_entity_name = True
 
     def __init__(
-        self, *, entry: ConfigEntry, coordinator: DataUpdateCoordinator[Forecast]
+        self,
+        *,
+        entry: OpenMeteoConfigEntry,
+        coordinator: OpenMeteoDataUpdateCoordinator,
     ) -> None:
-        """Initialize Open-Meteo weather entity."""
+        """Initialize Open-Meteo entity."""
         super().__init__(coordinator=coordinator)
         self._attr_unique_id = f"{entry.entry_id}{f'-{self.entity_description.key}' if hasattr(self, 'entity_description') else ''}"
 
