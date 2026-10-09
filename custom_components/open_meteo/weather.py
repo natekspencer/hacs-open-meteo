@@ -51,30 +51,32 @@ class OpenMeteoWeatherEntity(
     @property
     def condition(self) -> str | None:
         """Return the current condition."""
-        if not self.coordinator.data.current:
+        if not self.coordinator.data.current_weather:
             return None
-        return WMO_TO_HA_CONDITION_MAP.get(self.coordinator.data.current.weather_code)
+        return WMO_TO_HA_CONDITION_MAP.get(
+            self.coordinator.data.current_weather.weather_code
+        )
 
     @property
     def native_temperature(self) -> float | None:
         """Return the platform temperature."""
-        if not self.coordinator.data.current:
+        if not self.coordinator.data.current_weather:
             return None
-        return self.coordinator.data.current.temperature_2m
+        return self.coordinator.data.current_weather.temperature
 
     @property
     def native_wind_speed(self) -> float | None:
         """Return the wind speed."""
-        if not self.coordinator.data.current:
+        if not self.coordinator.data.current_weather:
             return None
-        return self.coordinator.data.current.wind_speed_10m
+        return self.coordinator.data.current_weather.wind_speed
 
     @property
     def wind_bearing(self) -> float | str | None:
         """Return the wind bearing."""
-        if not self.coordinator.data.current:
+        if not self.coordinator.data.current_weather:
             return None
-        return self.coordinator.data.current.wind_direction_10m
+        return self.coordinator.data.current_weather.wind_direction
 
     @callback
     def _async_forecast_daily(self) -> list[Forecast] | None:
@@ -91,9 +93,9 @@ class OpenMeteoWeatherEntity(
                 datetime=_datetime.isoformat(),
             )
 
-            if daily.weather_code is not None:
+            if daily.weathercode is not None:
                 forecast[ATTR_FORECAST_CONDITION] = WMO_TO_HA_CONDITION_MAP.get(
-                    daily.weather_code[index]
+                    daily.weathercode[index]
                 )
 
             if daily.precipitation_sum is not None:

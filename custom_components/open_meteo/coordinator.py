@@ -66,12 +66,7 @@ class OpenMeteoDataUpdateCoordinator(DataUpdateCoordinator[Forecast]):
             return await self.open_meteo.forecast(
                 latitude=latitude,
                 longitude=longitude,
-                current=[
-                    HourlyParameters.TEMPERATURE_2M,
-                    HourlyParameters.WEATHER_CODE,
-                    HourlyParameters.WIND_DIRECTION_10M,
-                    HourlyParameters.WIND_SPEED_10M,
-                ],
+                current_weather=True,
                 daily=[
                     DailyParameters.PRECIPITATION_SUM,
                     DailyParameters.TEMPERATURE_2M_MAX,
