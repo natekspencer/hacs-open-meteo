@@ -10,7 +10,12 @@
       "request": "launch",
       "module": "homeassistant",
       "justMyCode": false,
-      "args": ["--debug", "-c", "config"]
+      "subProcess": false,
+      "args": [
+        "--debug",
+        "-c",
+        "config"
+      ]
     }
   ]
 }
