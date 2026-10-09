@@ -9,6 +9,6 @@
   "iot_class": "cloud_polling",
   "issue_tracker": "https://github.com/natekspencer/hacs-open-meteo/issues",
   "loggers": ["custom_components.open_meteo", "open_meteo"],
-  "requirements": ["open-meteo==0.3.2"],
+  "requirements": ["open-meteo>=1.0.1"],
   "version": "0.0.0"
 }

@@ -1,6 +1,6 @@
 {
   "name": "Open-Meteo",
-  "homeassistant": "2024.12.0",
+  "homeassistant": "2026.10.0",
   "render_readme": true,
   "zip_release": true,
   "filename": "open_meteo.zip"
