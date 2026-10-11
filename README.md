@@ -1,6 +1,5 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://brands.home-assistant.io/open_meteo/dark_logo.png">
-  <img alt="Open-Meteo logo" src="https://brands.home-assistant.io/open_meteo/logo.png">
+  <img alt="Open-Meteo logo" src="custom_components/open_meteo/brand/icon.png">
 </picture>
 
 # Open-Meteo Home Assistant integration for zones and device trackers
