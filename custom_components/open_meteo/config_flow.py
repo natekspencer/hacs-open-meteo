@@ -5,6 +5,7 @@ from __future__ import annotations
 from typing import Any
 
 import voluptuous as vol
+
 from homeassistant.components.device_tracker import DOMAIN as DEVICE_TRACKER_DOMAIN
 from homeassistant.components.zone import DOMAIN as ZONE_DOMAIN
 from homeassistant.config_entries import ConfigEntry, ConfigFlow, ConfigFlowResult
