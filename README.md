@@ -44,14 +44,19 @@ If you prefer manual installation:
 This integration used to replace the core Open-Meteo integration using the `open_meteo` domain. It now uses `open_meteo_anywhere`, and existing locations don't move over automatically.
 
 1. Make sure Home Assistant is version 2026.11.0 or later, as older versions can't install the new release
-2. Note the entity IDs you use in automations and dashboards
+2. Before deleting anything, note down:
+   - The entity IDs you use in automations, scripts and dashboards
+   - Any custom update interval set in the integration's options
+   - Any automations using Open-Meteo device triggers or conditions, as these refer to the old device and will need recreating
 3. Delete your Open-Meteo entries in [Settings > Devices & services](https://my.home-assistant.io/redirect/integrations/)
-4. In HACS, remove the integration and its custom repository, then add the repository again and download **Open-Meteo Anywhere** using the [HACS installation steps](#hacs-recommended)
+4. Install Open-Meteo Anywhere:
+   - **HACS:** remove the integration and its custom repository, then add the repository again and download **Open-Meteo Anywhere** using the [HACS installation steps](#hacs-recommended)
+   - **Manual:** copy the new folder using the [manual installation steps](#manual)
 5. If the old `custom_components/open_meteo` folder is still there, delete it, as it would keep overriding the core integration
 6. Restart Home Assistant
-7. Add your locations again using **Open-Meteo Anywhere**
+7. Add your locations again using **Open-Meteo Anywhere**, and set any custom update intervals again
 8. If you used the temperature sensor, enable it, as it's disabled by default and renaming it won't enable it
-9. Rename the new entities to your old entity IDs
+9. Rename the new entities to your old entity IDs, then recreate any device triggers and conditions
 
 ## ➕ Setup
 
