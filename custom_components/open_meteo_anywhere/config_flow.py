@@ -28,7 +28,9 @@ _ZONE_SCHEMA = probatio.Schema(
 )
 OPTIONS_SCHEMA = probatio.Schema(
     {
-        probatio.Required(CONF_SCAN_INTERVAL, default=DEFAULT_SCAN_INTERVAL): int,
+        probatio.Required(
+            CONF_SCAN_INTERVAL, default=DEFAULT_SCAN_INTERVAL
+        ): probatio.All(int, probatio.Range(min=1)),
     }
 )
 OPTIONS_FLOW = {

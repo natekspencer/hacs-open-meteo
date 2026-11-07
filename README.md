@@ -39,6 +39,18 @@ If you prefer manual installation:
 
 > ⚠️ Manual installation will not provide automatic update notifications. HACS installation is recommended unless you have a specific need.
 
+## ⬆️ Upgrading from the `open_meteo` domain
+
+This integration used to replace the core Open-Meteo integration using the `open_meteo` domain. It now uses `open_meteo_anywhere`, and existing locations don't move over automatically.
+
+1. Note the entity IDs you use in automations and dashboards
+2. Delete your Open-Meteo entries in [Settings > Devices & services](https://my.home-assistant.io/redirect/integrations/)
+3. Update the integration in HACS
+4. Delete the old `custom_components/open_meteo` folder, as HACS won't remove it and it would keep overriding the core integration
+5. Restart Home Assistant
+6. Add your locations again using **Open-Meteo Anywhere**
+7. Rename the new entities to your old entity IDs
+
 ## ➕ Setup
 
 Once installed, you can set up the integration by clicking on the following badge:
