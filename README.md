@@ -4,13 +4,13 @@
 
 # Open-Meteo Anywhere Home Assistant integration for zones and device trackers
 
-[![Release](https://img.shields.io/github/v/release/natekspencer/hacs-open-meteo?style=for-the-badge)](https://github.com/natekspencer/hacs-open-meteo/releases)
+[![Release](https://img.shields.io/github/v/release/natekspencer/ha-open-meteo-anywhere?style=for-the-badge)](https://github.com/natekspencer/ha-open-meteo-anywhere/releases)
 [![HACS Badge](https://img.shields.io/badge/HACS-custom-41BDF5.svg?style=for-the-badge)](https://github.com/hacs/integration)
 [![Buy Me A Coffee/Beer](https://img.shields.io/badge/Buy_Me_A_☕/🍺-F16061?style=for-the-badge&logo=ko-fi&logoColor=white&labelColor=grey)](https://ko-fi.com/natekspencer)
 [![Sponsor on GitHub](https://img.shields.io/badge/Sponsor_💜-6f42c1?style=for-the-badge&logo=github&logoColor=white&labelColor=grey)](https://github.com/sponsors/natekspencer)
 
-![Downloads](https://img.shields.io/github/downloads/natekspencer/hacs-open-meteo/total?style=flat-square)
-![Latest Downloads](https://img.shields.io/github/downloads/natekspencer/hacs-open-meteo/latest/total?style=flat-square)
+![Downloads](https://img.shields.io/github/downloads/natekspencer/ha-open-meteo-anywhere/total?style=flat-square)
+![Latest Downloads](https://img.shields.io/github/downloads/natekspencer/ha-open-meteo-anywhere/latest/total?style=flat-square)
 
 Based on the core [Open-Meteo integration](https://www.home-assistant.io/integrations/open_meteo/), with weather forecasts for both zones and device trackers with geolocation data in Home Assistant, installed through [HACS](https://hacs.xyz/docs/setup/download). It can run alongside the core integration.
 
@@ -18,11 +18,11 @@ Based on the core [Open-Meteo integration](https://www.home-assistant.io/integra
 
 ### HACS (Recommended)
 
-[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=natekspencer&repository=hacs-open-meteo&category=integration)
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=natekspencer&repository=ha-open-meteo-anywhere&category=integration)
 
 1. Use the **My Home Assistant** badge above, or from within Home Assistant, click on **HACS**
 2. Click the vertical ellipsis (⋮) → **Custom repositories**
-3. Enter `natekspencer/hacs-open-meteo` in the _Repository_ field and select `Integration` in the _Type_ dropdown
+3. Enter `natekspencer/ha-open-meteo-anywhere` in the _Repository_ field and select `Integration` in the _Type_ dropdown
 4. Click **ADD**
 5. Close the _Custom repositories_ window
 6. Search for `Open-Meteo Anywhere` and click on the appropriate repository
@@ -79,9 +79,9 @@ I maintain this Home Assistant integration in my spare time. If you find it usef
 - 💜 [Sponsor me on GitHub](https://github.com/sponsors/natekspencer)
 - ☕ [Buy me a coffee / beer](https://ko-fi.com/natekspencer)
 - 💸 [PayPal (direct support)](https://www.paypal.com/paypalme/natekspencer)
-- ⭐ [Star this project](https://github.com/natekspencer/hacs-open-meteo)
+- ⭐ [Star this project](https://github.com/natekspencer/ha-open-meteo-anywhere)
 - 📦 If you’d like to support in other ways, such as donating hardware for testing, feel free to [reach out to me](https://github.com/natekspencer)
 
 ## 📈 Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=natekspencer/hacs-open-meteo)](https://www.star-history.com/#natekspencer/hacs-open-meteo)
+[![Star History Chart](https://api.star-history.com/svg?repos=natekspencer/ha-open-meteo-anywhere)](https://www.star-history.com/#natekspencer/ha-open-meteo-anywhere)
