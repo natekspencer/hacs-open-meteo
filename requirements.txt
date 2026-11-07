@@ -1,8 +1,8 @@
 # Home Assistant
-homeassistant>=2026.10
+homeassistant>=2026.11
 
 # Integration
-open-meteo==0.3.2
+open-meteo==1.0.1
 
 # Development
 colorlog>=6.12.0

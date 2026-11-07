@@ -1,7 +1,5 @@
 """Constants for the Open-Meteo integration."""
 
-from __future__ import annotations
-
 import logging
 from typing import Final
 
@@ -16,7 +14,7 @@ from homeassistant.components.weather import (
     ATTR_CONDITION_SUNNY,
 )
 
-DOMAIN: Final = "open_meteo"
+DOMAIN: Final = "open_meteo_anywhere"
 
 LOGGER = logging.getLogger(__package__)
 DEFAULT_SCAN_INTERVAL = 30
@@ -24,7 +22,7 @@ DEFAULT_SCAN_INTERVAL = 30
 # World Meteorological Organization Weather Code
 # mapped to Home Assistant weather conditions.
 # https://www.weather.gov/tg/wmo
-WMO_TO_HA_CONDITION_MAP = {
+WMO_TO_HA_CONDITION_MAP: dict[int | None, str] = {
     0: ATTR_CONDITION_SUNNY,  # Clear sky
     1: ATTR_CONDITION_SUNNY,  # Mainly clear
     2: ATTR_CONDITION_PARTLYCLOUDY,  # Partly cloudy

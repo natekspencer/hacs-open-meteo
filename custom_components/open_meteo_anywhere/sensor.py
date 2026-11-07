@@ -1,6 +1,6 @@
 """Support for Open-Meteo sensor."""
 
-from __future__ import annotations
+from typing import override
 
 from homeassistant.components.sensor import (
     SensorDeviceClass,
@@ -15,13 +15,15 @@ from homeassistant.helpers.entity_platform import AddConfigEntryEntitiesCallback
 from .coordinator import OpenMeteoConfigEntry
 from .entity import OpenMeteoEntity
 
+PARALLEL_UPDATES = 0
+
 
 async def async_setup_entry(
     hass: HomeAssistant,
     entry: OpenMeteoConfigEntry,
     async_add_entities: AddConfigEntryEntitiesCallback,
 ) -> None:
-    """Set up Open-Meteo weather entity based on a config entry."""
+    """Set up Open-Meteo sensor entity based on a config entry."""
     coordinator = entry.runtime_data
     async_add_entities([OpenMeteoSensorEntity(entry=entry, coordinator=coordinator)])
 
@@ -41,8 +43,9 @@ class OpenMeteoSensorEntity(OpenMeteoEntity, SensorEntity):
     entity_description = TEMPERATURE_SENSOR
 
     @property
+    @override
     def native_value(self) -> float | None:
         """Return the value reported by the sensor."""
-        if not self.coordinator.data.current_weather:
+        if not self.coordinator.data.current:
             return None
-        return self.coordinator.data.current_weather.temperature
+        return self.coordinator.data.current.temperature_2m

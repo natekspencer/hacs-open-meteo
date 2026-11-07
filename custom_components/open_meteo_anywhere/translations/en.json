@@ -1,0 +1,52 @@
+{
+  "config": {
+    "abort": {
+      "already_configured": "Service is already configured"
+    },
+    "error": {
+      "cannot_connect": "Failed to connect",
+      "invalid_location": "The location selected does not have a valid latitude or longitude.",
+      "zone_not_found": "The selected location does not exist."
+    },
+    "step": {
+      "reconfigure": {
+        "data": {
+          "zone": "Location"
+        },
+        "data_description": {
+          "zone": "The zone or device tracker to get the weather forecast for."
+        },
+        "description": "Update the location used for weather forecasting"
+      },
+      "user": {
+        "data": {
+          "zone": "Location"
+        },
+        "data_description": {
+          "zone": "The zone or device tracker to get the weather forecast for."
+        },
+        "description": "Select location to use for weather forecasting"
+      }
+    }
+  },
+  "exceptions": {
+    "communication_error": {
+      "message": "An error occurred while communicating with the Open-Meteo API."
+    },
+    "invalid_location": {
+      "message": "Location {zone} does not have a valid latitude or longitude."
+    },
+    "zone_not_found": {
+      "message": "Location {zone} not found."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "scan_interval": "Set the time interval (in minutes) between forecast updates"
+        }
+      }
+    }
+  }
+}

@@ -1,14 +1,16 @@
 {
-  "domain": "open_meteo",
-  "name": "Open-Meteo",
+  "domain": "open_meteo_anywhere",
+  "name": "Open-Meteo Anywhere",
+  "categories": ["weather_alerts.forecasts"],
   "codeowners": ["@natekspencer"],
   "config_flow": true,
+  "connectivity": ["cloud"],
   "dependencies": ["device_tracker", "zone"],
   "documentation": "https://www.github.com/natekspencer/hacs-open-meteo",
   "integration_type": "service",
   "iot_class": "cloud_polling",
   "issue_tracker": "https://github.com/natekspencer/hacs-open-meteo/issues",
-  "loggers": ["custom_components.open_meteo", "open_meteo"],
-  "requirements": ["open-meteo>=0.3.2"],
+  "loggers": ["custom_components.open_meteo_anywhere", "open_meteo"],
+  "requirements": ["open-meteo>=1.0.1"],
   "version": "0.0.0"
 }
