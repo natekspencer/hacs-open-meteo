@@ -48,6 +48,7 @@ This integration used to replace the core Open-Meteo integration using the `open
    - The entity IDs you use in automations, scripts and dashboards
    - Any custom update interval set in the integration's options
    - Any automations using Open-Meteo device triggers or conditions, as these refer to the old device and will need recreating
+   - Any customizations of the old devices and entities, such as areas, labels, names and icons, as these don't carry over
 3. Delete your Open-Meteo entries in [Settings > Devices & services](https://my.home-assistant.io/redirect/integrations/)
 4. Install Open-Meteo Anywhere:
    - **HACS:** remove the integration and its custom repository, then add the repository again and download **Open-Meteo Anywhere** using the [HACS installation steps](#hacs-recommended)
@@ -56,7 +57,7 @@ This integration used to replace the core Open-Meteo integration using the `open
 6. Restart Home Assistant
 7. Add your locations again using **Open-Meteo Anywhere**, and set any custom update intervals again
 8. If you used the temperature sensor, enable it, as it's disabled by default and renaming it won't enable it
-9. Rename the new entities to your old entity IDs, then recreate any device triggers and conditions
+9. Rename the new entities to your old entity IDs, reapply your customizations, then recreate any device triggers and conditions
 
 ## ➕ Setup
 
