@@ -22,15 +22,15 @@ jobs:
         shell: bash
         run: |
           yq -i -o json '.version="${{ github.event.release.tag_name }}"' \
-            "${{ github.workspace }}/custom_components/open_meteo/manifest.json"
+            "${{ github.workspace }}/custom_components/open_meteo_anywhere/manifest.json"
 
       - name: ZIP integration directory
         shell: bash
         run: |
-          cd "${{ github.workspace }}/custom_components/open_meteo"
-          zip open_meteo.zip -r ./
+          cd "${{ github.workspace }}/custom_components/open_meteo_anywhere"
+          zip open_meteo_anywhere.zip -r ./
 
       - name: Upload ZIP file to release
         uses: softprops/action-gh-release@v3
         with:
-          files: ${{ github.workspace }}/custom_components/open_meteo/open_meteo.zip
+          files: ${{ github.workspace }}/custom_components/open_meteo_anywhere/open_meteo_anywhere.zip

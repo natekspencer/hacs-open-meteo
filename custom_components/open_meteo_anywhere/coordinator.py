@@ -3,11 +3,6 @@
 from datetime import timedelta
 from typing import override
 
-from homeassistant.config_entries import ConfigEntry
-from homeassistant.const import CONF_SCAN_INTERVAL, CONF_ZONE, EntityStateAttribute
-from homeassistant.core import HomeAssistant
-from homeassistant.helpers.aiohttp_client import async_get_clientsession
-from homeassistant.helpers.update_coordinator import DataUpdateCoordinator, UpdateFailed
 from open_meteo import (
     DailyParameters,
     Forecast,
@@ -18,6 +13,12 @@ from open_meteo import (
     TemperatureUnit,
     WindSpeedUnit,
 )
+
+from homeassistant.config_entries import ConfigEntry
+from homeassistant.const import CONF_SCAN_INTERVAL, CONF_ZONE, EntityStateAttribute
+from homeassistant.core import HomeAssistant
+from homeassistant.helpers.aiohttp_client import async_get_clientsession
+from homeassistant.helpers.update_coordinator import DataUpdateCoordinator, UpdateFailed
 
 from .const import DEFAULT_SCAN_INTERVAL, DOMAIN, LOGGER
 

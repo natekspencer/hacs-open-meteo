@@ -5,14 +5,14 @@ It may contain bugs or break functionality in addition to adding new features an
 
 {% endif %}
 
-# Open-Meteo Home Assistant integration for zones and device trackers
+# Open-Meteo Anywhere Home Assistant integration for zones and device trackers
 
 [![GitHub Release][releases-shield]][releases]
 ![GitHub all releases][download-all]
 ![GitHub release (latest by SemVer)][download-latest]
 [![GitHub Activity][commits-shield]][commits]
 
-Replaces the existing [Open-Meteo integration](https://www.home-assistant.io/integrations/open_meteo/) to allow weather forecasts for both zones and device trackers in Home Assistant, installed through [HACS](https://hacs.xyz/docs/setup/download).
+Based on the core [Open-Meteo integration](https://www.home-assistant.io/integrations/open_meteo/), with weather forecasts for both zones and device trackers with geolocation data in Home Assistant, installed through [HACS](https://hacs.xyz/docs/setup/download). It can run alongside the core integration.
 
 {% if not installed %}
 
@@ -21,7 +21,7 @@ Replaces the existing [Open-Meteo integration](https://www.home-assistant.io/int
 1. Click install.
 2. Reboot Home Assistant.
 3. Hard refresh browser cache.
-4. [![Add Integration][add-integration-badge]][add-integration] or in the HA UI go to "Configuration" -> "Integrations" click "+" and search for "Open-Meteo".
+4. [![Add Integration][add-integration-badge]][add-integration] or in the HA UI go to "Configuration" -> "Integrations" click "+" and search for "Open-Meteo Anywhere".
 
 {% endif %}
 
@@ -38,5 +38,5 @@ The configuration flow is as follows:
 [releases]: https://github.com/natekspencer/hacs-open-meteo/releases
 [download-all]: https://img.shields.io/github/downloads/natekspencer/hacs-open-meteo/total?style=flat-square
 [download-latest]: https://img.shields.io/github/downloads/natekspencer/hacs-open-meteo/latest/total?style=flat-square
-[add-integration]: https://my.home-assistant.io/redirect/config_flow_start?domain=open_meteo
+[add-integration]: https://my.home-assistant.io/redirect/config_flow_start?domain=open_meteo_anywhere
 [add-integration-badge]: https://my.home-assistant.io/badges/config_flow_start.svg

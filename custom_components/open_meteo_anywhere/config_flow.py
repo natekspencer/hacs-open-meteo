@@ -2,6 +2,7 @@
 
 from typing import Any, override
 
+from open_meteo import HourlyParameters, OpenMeteo, OpenMeteoError
 import probatio
 
 from homeassistant.components.device_tracker import DOMAIN as DEVICE_TRACKER_DOMAIN
@@ -15,7 +16,6 @@ from homeassistant.helpers.schema_config_entry_flow import (
     SchemaOptionsFlowHandlerWithReload,
 )
 from homeassistant.helpers.selector import EntitySelector, EntitySelectorConfig
-from open_meteo import HourlyParameters, OpenMeteo, OpenMeteoError
 
 from .const import DEFAULT_SCAN_INTERVAL, DOMAIN
 

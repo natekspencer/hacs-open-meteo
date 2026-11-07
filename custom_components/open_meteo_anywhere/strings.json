@@ -11,10 +11,10 @@
     "step": {
       "reconfigure": {
         "data": {
-          "zone": "[%key:component::open_meteo::config::step::user::data::zone%]"
+          "zone": "[%key:component::open_meteo_anywhere::config::step::user::data::zone%]"
         },
         "data_description": {
-          "zone": "[%key:component::open_meteo::config::step::user::data_description::zone%]"
+          "zone": "[%key:component::open_meteo_anywhere::config::step::user::data_description::zone%]"
         },
         "description": "Update the location used for weather forecasting"
       },
