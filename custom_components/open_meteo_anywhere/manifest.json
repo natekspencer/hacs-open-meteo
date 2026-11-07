@@ -6,10 +6,10 @@
   "config_flow": true,
   "connectivity": ["cloud"],
   "dependencies": ["device_tracker", "zone"],
-  "documentation": "https://www.github.com/natekspencer/hacs-open-meteo",
+  "documentation": "https://www.github.com/natekspencer/ha-open-meteo-anywhere",
   "integration_type": "service",
   "iot_class": "cloud_polling",
-  "issue_tracker": "https://github.com/natekspencer/hacs-open-meteo/issues",
+  "issue_tracker": "https://github.com/natekspencer/ha-open-meteo-anywhere/issues",
   "loggers": ["custom_components.open_meteo_anywhere", "open_meteo"],
   "requirements": ["open-meteo>=1.0.1"],
   "version": "0.0.0"

@@ -1,7 +1,7 @@
 {% if prerelease %}
 
 This integration is a pre-release version.
-It may contain bugs or break functionality in addition to adding new features and fixes. Please review open issues and submit new ones to the [GitHub issue tracker](https://github.com/natekspencer/hacs-open-meteo/issues).
+It may contain bugs or break functionality in addition to adding new features and fixes. Please review open issues and submit new ones to the [GitHub issue tracker](https://github.com/natekspencer/ha-open-meteo-anywhere/issues).
 
 {% endif %}
 
@@ -32,11 +32,11 @@ The configuration flow is as follows:
 1. **Location (required)**
    - Select a location (zone or device tracker) to obtain weather information based on the latitude and longitude.
 
-[commits-shield]: https://img.shields.io/github/commit-activity/w/natekspencer/hacs-open-meteo?style=flat-square
-[commits]: https://github.com/natekspencer/hacs-open-meteo/commits/main
-[releases-shield]: https://img.shields.io/github/release/natekspencer/hacs-open-meteo.svg?style=flat-square
-[releases]: https://github.com/natekspencer/hacs-open-meteo/releases
-[download-all]: https://img.shields.io/github/downloads/natekspencer/hacs-open-meteo/total?style=flat-square
-[download-latest]: https://img.shields.io/github/downloads/natekspencer/hacs-open-meteo/latest/total?style=flat-square
+[commits-shield]: https://img.shields.io/github/commit-activity/w/natekspencer/ha-open-meteo-anywhere?style=flat-square
+[commits]: https://github.com/natekspencer/ha-open-meteo-anywhere/commits/main
+[releases-shield]: https://img.shields.io/github/release/natekspencer/ha-open-meteo-anywhere.svg?style=flat-square
+[releases]: https://github.com/natekspencer/ha-open-meteo-anywhere/releases
+[download-all]: https://img.shields.io/github/downloads/natekspencer/ha-open-meteo-anywhere/total?style=flat-square
+[download-latest]: https://img.shields.io/github/downloads/natekspencer/ha-open-meteo-anywhere/latest/total?style=flat-square
 [add-integration]: https://my.home-assistant.io/redirect/config_flow_start?domain=open_meteo_anywhere
 [add-integration-badge]: https://my.home-assistant.io/badges/config_flow_start.svg
